@@ -1,0 +1,21 @@
+version: "3.8"
+services: 
+  reservations-service:
+    build:
+      context: ./reservation-service
+      dockerfile: Dockerfile
+    container_name: reservation-service
+    networks:
+      - affluences
+  backend-test:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend-test
+    ports:
+      - "81:8888"
+    networks:
+      - affluences
+networks:
+  affluences:
+      name: affluences-network
