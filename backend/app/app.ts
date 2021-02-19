@@ -1,5 +1,6 @@
 import express from 'express';
 import Controller from './controllers/controller';
+import path from 'path';
 
 export default class App {
 
@@ -9,6 +10,8 @@ export default class App {
         this.app = express();
         this.initializeMiddlewares();
         this.initializeControllers(controllers);
+        this.app.use('/', express.static(path.join(__dirname, './public')));
+        this.app.use('/*', controllers[controllers.length - 1].router);   
     }
 
     listen() {

@@ -1,0 +1,5 @@
+<form [formGroup]="options.form">
+  <input matInput placeholder="Date" [matDatepicker]="picker" [min]="options.min" (click)="picker.open()"
+    (dateChange)="eventChange($event)" readonly="readonly" [formControlName]="options.formControlName">
+  <mat-datepicker #picker></mat-datepicker>
+</form>

@@ -1,0 +1,4 @@
+<form [formGroup]="options.form">
+  <input [type]="options.type" [placeholder]="options.placeholder" [formControlName]="options.formControlName">
+  <label *ngIf="options.label !== undefined">{{options.label}}</label>
+</form>

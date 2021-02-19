@@ -1,0 +1,37 @@
+div.main {
+  width: 35%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p {
+    text-align: center;
+    color: #666666;
+  }
+
+  div.wrapper-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    div.select-wrapper {
+      width: 20%;
+    }
+  }
+
+  .button-wrapper {
+    width: 100%;
+    margin-top: 3vh;
+    align-items: center;
+
+    button {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

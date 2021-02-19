@@ -1,0 +1,6 @@
+<form [formGroup]="options.form">
+  <p *ngIf="options.form.controls[options.formControlName].value === ''">Time</p>
+  <select [formControlName]="options.formControlName">
+    <option *ngFor="let item of options.items; let index = index" [value]="item" [selected]="item === 'Time'">{{ item }}</option>
+  </select>
+</form>

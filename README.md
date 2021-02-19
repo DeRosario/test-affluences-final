@@ -5,9 +5,7 @@
 Install docker & docker-compose then run :
 
 ```
-docker-compose build
-
-docker-compose up -d
+sh deploy.sh
 ```
 
 ## DOCUMENTATION - ROUTE

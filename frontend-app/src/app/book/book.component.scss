@@ -1,0 +1,52 @@
+div.main {
+  width: 35%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p {
+    text-align: center;
+    color: #666666;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+      margin-top: 4vh;
+
+      &.input-text {
+        align-items: center;
+      }
+
+      &.input-checkbox {
+        position: relative;
+        left: 20%;
+      }
+    }
+  }
+
+  .button-wrapper {
+    width: 100%;
+    margin-top: 3vh;
+    align-items: center;
+
+    button {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.back-button {
+  position: relative;
+  left: 15%;
+}

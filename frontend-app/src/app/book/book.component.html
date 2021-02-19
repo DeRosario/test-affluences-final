@@ -1,0 +1,22 @@
+<div>
+  <button class="back-button" [routerLink]="'/search'">Back</button>
+</div>
+
+<div class="main">
+  <p>Selected timeslot: {{ timeslotChoosen }}</p>
+  <form [formGroup]="formSaveReservation" (submit)="saveReservation()">
+    <div class="row" *ngFor="let row of rowsInputsOptions">
+      <div class="column input-text" *ngFor="let inputOption of row">
+        <app-input [options]="inputOption"></app-input>
+      </div>
+    </div>
+    <div class="row" *ngFor="let row of rowsCheckboxsOptions">
+      <div class="column input-checkbox" *ngFor="let checkboxOption of row">
+        <app-checkbox [options]="checkboxOption"></app-checkbox>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button type="submit">Book</button>
+    </div>
+  </form>
+</div>
